@@ -35,4 +35,11 @@ An executable JAR file named `app-all.jar` is provided. To run the application, 
 
 ```bash
 java -jar app-all.jar
+```
+or, run following commands
+```bash
+git clone https://github.com/tkmnet/multiwise-video-rank.git
+cd multiwise-video-rank
+./gradlew run
+```
 
