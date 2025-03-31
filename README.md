@@ -6,6 +6,7 @@ Video Rank is an annotation tool for ranking videos. It displays video files fro
 
 - **Multi-Video Display:**  
   Videos are loaded from subdirectories in the `./target` folder and displayed in groups of up to three side by side.
+  The subfolder name of the target folder must be an integer value starting from 0.
 
 - **Interactive Annotation:**  
   - Click on a video (or press the corresponding digit key) to assign a ranking.  
