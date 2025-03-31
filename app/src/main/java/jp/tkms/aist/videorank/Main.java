@@ -52,7 +52,7 @@ public class Main extends Application {
                 if (lastLine != null) {
                     String[] tokens = lastLine.split(",");
                     int lastFolder = Integer.parseInt(tokens[0].trim());
-                    currentIndex = lastFolder; // lastFolder is 1-based; next folder to process is lastFolder (0-based)
+                    currentIndex = lastFolder + 1;
                 }
             } catch (IOException ex) { ex.printStackTrace(); }
         }
@@ -119,7 +119,7 @@ public class Main extends Application {
         List<VideoItem> sortedItems = new ArrayList<>(currentVideoItems);
         sortedItems.sort(Comparator.comparingInt(item -> item.getOrderSpinner().getValue()));
         StringBuilder sb = new StringBuilder();
-        sb.append(currentIndex + 1);
+        sb.append(currentIndex);
         for (VideoItem item : sortedItems) sb.append(",").append(item.getBaseName());
         sb.append("\n");
         try (FileWriter fw = new FileWriter("results.csv", true)) {
